@@ -1,4 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     height: 100%;
     background: linear-gradient(to right, black 50%, grey 50%) fixed;
+}
+
+.container {
+    background-color: lightgrey;
+    width: 400px;
+    padding: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    box-shadow: 5px 30px 40px black;
+    border-radius: 10px;
+    perspective: 300px;
+}
+
+.stats {
+    text-align: right;
+    color: black;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.coin {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    margin: 50px auto;
+    transform-style: preserve-3d;
+}
+
+.yazi {
+    transform: rotateX(180deg);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.coin img {
+    width: 145px;
+}
+
+.tura,
+.yazi {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+#tura-count {
+    font-weight: bold;
+    font-size: large;
+}
+
+#yazi-count {
+    font-weight: bold;
+    font-size: large;
+}
+
+button {
+    width: 120px;
+    padding: 10px 0px;
+    border: 3px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#flip-button {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+#flip-button:disabled {
+    background-color: white;
+    color: black;
+    border-radius: #e1e0ee;
+    opacity: 0.6;
+}
+
+#reset-button {
+    background-color: #ee2c2c;
+    color: black;
+    font-weight: bold;
+}
+
+@keyframes spin-yazi {
+    0% {
+        transform: rotateX(0);
+    }
+
+    100% {
+        transform: rotateX(1980deg);
+    }
+}
+
+@keyframes spin-tura {
+    0% {
+        transform: rotateX(0);
+    }
+
+    100% {
+        transform: rotateX(2160deg);
+    }
 }
